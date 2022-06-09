@@ -1,0 +1,17 @@
+{
+	"name": "SqlServerparameterizedLS",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"parameters": {
+			"dbName": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "integrated security=False;data source=AZ-VDI-D1-193;initial catalog=@{linkedService().dbName};user id=sa",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDdGMTI0NTRCLTdGRDMtNDI5OC1CQkFGLTAwOUVCQzM0NTc5NV81NTFiYjUzMS1hNGU0LTQ2ZDQtYjlmNC1iY2NhYWRiMWNlYjUiDQp9"
+		}
+	}
+}
