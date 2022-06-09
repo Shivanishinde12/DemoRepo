@@ -1,0 +1,16 @@
+{
+	"name": "SqlServerlocaldb1",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "integrated security=False;data source=AZ-VDI-D1-193;initial catalog=studentdata;user id=sa",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIwYmU2YTQ1Yi05NzA3LTQzZGItYTY2My03ZTY0ZmE3YWQ0NDYiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "IRExcelCopyToDb",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
