@@ -1,0 +1,12 @@
+{
+	"name": "copysqldbLS1",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"connectionString": "integrated security=False;encrypt=True;connection timeout=30;data source=sserverdemo.database.windows.net;initial catalog=databasetable1;user id=shivanishinde",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDcxQzREQzAyLTM1RjEtNDU0MC04MUQ5LTBCODMzNjY2NDM4M19lNWIwOGUwOS1mNGMwLTQzMzAtYmU4MC03Y2NjMTYxYmIzMmUiDQp9"
+		}
+	}
+}
