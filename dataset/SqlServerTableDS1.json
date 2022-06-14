@@ -1,0 +1,33 @@
+{
+	"name": "SqlServerTableDS1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SqlServerlocaldb1",
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"dbName": {
+					"value": "@dataset().dbName",
+					"type": "Expression"
+				}
+			}
+		},
+		"parameters": {
+			"dbName": {
+				"type": "string"
+			},
+			"localtableName": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "clg",
+			"table": {
+				"value": "@dataset().localtableName",
+				"type": "Expression"
+			}
+		}
+	}
+}

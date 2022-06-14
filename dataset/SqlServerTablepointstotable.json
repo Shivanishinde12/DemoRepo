@@ -1,0 +1,27 @@
+{
+	"name": "SqlServerTablepointstotable",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SqlServerlocaldb1",
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"dbName": "collegeData"
+			}
+		},
+		"parameters": {
+			"tableName": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "clg",
+			"table": {
+				"value": "@dataset().tableName",
+				"type": "Expression"
+			}
+		}
+	}
+}

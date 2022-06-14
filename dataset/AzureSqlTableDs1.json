@@ -1,0 +1,24 @@
+{
+	"name": "AzureSqlTableDs1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabaseLS1",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"tablenameds": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": {
+				"value": "@dataset().tablenameds",
+				"type": "Expression"
+			}
+		}
+	}
+}
