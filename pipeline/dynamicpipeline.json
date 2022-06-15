@@ -89,13 +89,7 @@
 							"inputs": [
 								{
 									"referenceName": "SqlServerTablepointstotable",
-									"type": "DatasetReference",
-									"parameters": {
-										"tableName": {
-											"value": "@item().name",
-											"type": "Expression"
-										}
-									}
+									"type": "DatasetReference"
 								}
 							],
 							"outputs": [
