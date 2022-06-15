@@ -1,0 +1,112 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "copystorageacctodb"
+		},
+		"AzureBlobStorageExcelLS2_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorageExcelLS2'"
+		},
+		"AzureSqlDatabaseLS1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabaseLS1'"
+		},
+		"SqlServerdbLS_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'SqlServerdbLS'"
+		},
+		"SqlServerlocaldb1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'SqlServerlocaldb1'"
+		},
+		"SqldbLS1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'SqldbLS1'"
+		},
+		"StorageAccLS1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'StorageAccLS1'"
+		},
+		"copySqldbLS2_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'copySqldbLS2'"
+		},
+		"copysqldbLS1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'copysqldbLS1'"
+		},
+		"copystorageaccLS1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'copystorageaccLS1'"
+		},
+		"sdynamicIR1_properties_typeProperties_linkedInfo_resourceId": {
+			"type": "string",
+			"defaultValue": "/subscriptions/7d21d560-a9c2-4fa4-9591-ee1ff2ac4ca3/resourcegroups/TestEnviorment/providers/Microsoft.DataFactory/factories/scopydf/integrationruntimes/selfHostedIR"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "copystorageacctodb_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"AzureBlobStorageExcelLS2_connectionString": {
+						"value": "[parameters('AzureBlobStorageExcelLS2_connectionString')]"
+					},
+					"AzureSqlDatabaseLS1_connectionString": {
+						"value": "[parameters('AzureSqlDatabaseLS1_connectionString')]"
+					},
+					"SqldbLS1_connectionString": {
+						"value": "[parameters('SqldbLS1_connectionString')]"
+					},
+					"StorageAccLS1_connectionString": {
+						"value": "[parameters('StorageAccLS1_connectionString')]"
+					},
+					"copySqldbLS2_connectionString": {
+						"value": "[parameters('copySqldbLS2_connectionString')]"
+					},
+					"copysqldbLS1_connectionString": {
+						"value": "[parameters('copysqldbLS1_connectionString')]"
+					},
+					"copystorageaccLS1_connectionString": {
+						"value": "[parameters('copystorageaccLS1_connectionString')]"
+					},
+					"SqlServerdbLS_connectionString": {
+						"value": "[parameters('SqlServerdbLS_connectionString')]"
+					},
+					"SqlServerlocaldb1_connectionString": {
+						"value": "[parameters('SqlServerlocaldb1_connectionString')]"
+					},
+					"sdynamicIR1_properties_typeProperties_linkedInfo_resourceId": {
+						"value": "[parameters('sdynamicIR1_properties_typeProperties_linkedInfo_resourceId')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}

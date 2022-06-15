@@ -1,0 +1,45 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "copystorageacctodb"
+		},
+		"AzureBlobStorageExcelLS2_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabaseLS1_connectionString": {
+			"value": ""
+		},
+		"SqlServerdbLS_connectionString": {
+			"value": ""
+		},
+		"SqlServerlocaldb1_connectionString": {
+			"value": ""
+		},
+		"SqldbLS1_connectionString": {
+			"value": ""
+		},
+		"StorageAccLS1_connectionString": {
+			"value": ""
+		},
+		"copySqldbLS2_connectionString": {
+			"value": ""
+		},
+		"copysqldbLS1_connectionString": {
+			"value": ""
+		},
+		"copystorageaccLS1_connectionString": {
+			"value": ""
+		},
+		"sdynamicIR1_properties_typeProperties_linkedInfo_resourceId": {
+			"value": "/subscriptions/7d21d560-a9c2-4fa4-9591-ee1ff2ac4ca3/resourcegroups/TestEnviorment/providers/Microsoft.DataFactory/factories/scopydf/integrationruntimes/selfHostedIR"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
